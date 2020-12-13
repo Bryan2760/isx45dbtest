@@ -60,6 +60,7 @@ app.post("/", async (req, res) => {
 
     dblib.findCar(req.body)
         .then(result => {
+            console.log("test",result);
             res.render("index", {
                 type: "post",
                 totRecs: totRecs.totRecords,
@@ -68,6 +69,7 @@ app.post("/", async (req, res) => {
             })
         })
         .catch(err => {
+            console.log("testerror",result);
             res.render("index", {
                 type: "post",
                 totRecs: totRecs.totRecords,

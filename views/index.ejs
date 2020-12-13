@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,7 +49,7 @@
 
 <!-- Omitted Error Checking / Needs to be added -->
 <% if (type === "post") { %>
-    <% if (result.result.length === 0) { %>
+    <% if (result.result.length === 0) { %> 
         <h3>No records found!</h3>
     <% } else { %>
         <table>
@@ -62,7 +62,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% result.result.forEach(car => { %> 
+             <% result.result.forEach(car => { %> 
                     <tr>
                         <td><%= car.carvin %></td>
                         <td><%= car.carmake %></td>
@@ -78,4 +78,5 @@
 <%- include("_footer") -%>   
 </body>
 
+</html>
 </html>
