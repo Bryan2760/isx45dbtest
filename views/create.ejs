@@ -1,0 +1,31 @@
+<%- include("_header") -%>
+
+<h1>Create New Customer</h1>
+
+<form action="/create" method="post">
+  <div class="form-horizontal">
+
+    <%- include("_createNew") -%>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2"></label>
+      <div style="padding:20px"class="col-sm-10">
+        <input type="submit" value="Save" class="btn btn-default btn-info" />
+        <a class="btn btn-danger cancel" href="/">Cancel</a>
+      </div>
+    </div>
+  </div>
+</form>
+
+<% if(type === "POST") { %>
+  <% if (resultNew === 1) { %>
+    <h3>Customer Successfully Created!</h3>
+  <% } else { %>
+      <h3>Error! </h3>
+      <p><%= resultNew %></p>
+  <% } %>
+<% } %>
+
+
+
+<%- include("_footer") -%>
